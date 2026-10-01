@@ -10,11 +10,29 @@ body{
     transition: all 1s ease;
     padding: 40px;
 }
-
+.portada{
+    width: 100%;
+    height: auto;
+    display: block;
+}
 /* Cuando aparece en pantalla */
 .texto-scroll.mostrar {
     opacity: 1;
     transform: translateX(0);
+
+    animation-name: movimientoScroll;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+}
+@keyframes movimientoScroll {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 nav{
     background-color: #c01818;
