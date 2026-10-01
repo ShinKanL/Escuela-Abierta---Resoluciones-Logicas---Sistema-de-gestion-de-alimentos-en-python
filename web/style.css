@@ -1,0 +1,201 @@
+body{
+    background-color: #f0f0f0;
+    margin: 0;
+    color: #333;
+    font-family: "Fira Sans", sans-serif;
+}
+nav{
+    background-color: #c01818;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+    text-decoration: none;
+}
+h1, h3, h4, h5, h6{
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    text-align: center;
+}
+h2 span{
+    text-align:left;
+    font-family: 'Arial', sans-serif;
+    size: 1.2em;
+    margin-left: 10px;
+}
+.principal{
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    gap: 20px;
+}
+.inicio{
+    display: flex;
+    border: 1px solid #c01818;
+    padding: 20px;
+    gap: 20px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fondo oscuro y desenfocado */
+.mi-boton {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fondo-login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+/* Cuando se abre */
+.fondo-login.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ventana */
+.ventana-login {
+    width: 350px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+/* TÃ­tulo */
+.ventana-login h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Campos */
+.ventana-login label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.ventana-login input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* BotÃģn ingresar */
+.boton-ingresar {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* BotÃģn cerrar */
+.cerrar-login {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Menú de comedores */
+
+.menu-comedores {
+    position: relative;
+}
+
+
+.menu-comedores > a {
+    cursor: pointer;
+}
+
+
+/* Menú desplegable */
+.lista-comedores {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 320px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 10px;
+    display: none;
+    z-index: 10;
+}
+
+/* Cuando está abierto */
+.lista-comedores.activo {
+    display: block;
+}
+
+/* Cada comedor */
+.comedor {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.comedor:last-child {
+    border-bottom: none;
+}
+
+.comedor h3 {
+    margin: 0 0 8px 0;
+    color: #c01818;
+    text-align: left;
+}
+
+.comedor p {
+    margin: 5px 0;
+    font-size: 14px;
+}
