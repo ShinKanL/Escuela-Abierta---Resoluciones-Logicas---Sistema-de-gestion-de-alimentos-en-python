@@ -1,7 +1,15 @@
+:root{
+    --color-principal: #60508E;
+    --color-secundario: #0D7AF3;
+    --color-texto: #333;
+    --color-fondo: #FFF2CF;
+    --color-boton: #0DCAF2;
+}
+
 body{
-    background-color: #f0f0f0;
+    background-color: var(--color-secundario);
     margin: 0;
-    color: #333;
+    color: var(--color-texto);
     font-family: "Fira Sans", sans-serif;
 }
 .texto-scroll {
@@ -17,7 +25,7 @@ body{
     transform: translateX(0);
 }
 nav{
-    background-color: #c01818;
+    background-color: var(--color-principal);
     padding: 10px 20px;
     display: flex;
     justify-content: right;
@@ -37,6 +45,12 @@ nav ul li{
     margin: 0 10px;
     text-decoration: none;
 }
+
+nav ul li img{
+    max-height: 100px;
+}
+
+
 h1, h3, h4, h5, h6{
     font-family: 'Arial', sans-serif;
     color: #444;
@@ -75,7 +89,7 @@ img{
     padding: 12px 25px;
     border: none;
     border-radius: 8px;
-    background-color: #4CAF50;
+    background-color: var(--color-boton);
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -142,7 +156,7 @@ img{
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background-color: #4CAF50;
+    background-color: var(--color-boton);
     color: white;
     font-weight: bold;
     cursor: pointer;
