@@ -1,41 +1,114 @@
-import time
 import pandas as pd
-import sys as sys
-from defs import ver_productos
-from defs import eliminar_producto
-from defs import agregar_producto
+import time as t
+def registrarse():
+    ruta = r"C:\Users\aquil\Desktop\mierda\Escuela-Abierta---Resoluciones-Logicas---Sistema-de-gestion-de-alimentos-en-python\python\usuarios.csv"
+    print("---REGISTRO DE USUARIO---")
+    print("Ingrese su nombre de usuario:")
+    nombre_usuario = input()
+    print("Ingrese su correo electrónico (example@gmail.com):")
+    correo = input()
+    while True:
+        if not correo.endswith("@gmail.com") or correo.startswith("@gmail.com"):
+            print("El correo electrónico debe ser de Gmail. Por favor, ingrese un correo válido:")
+            correo = input()
+        else:
+            break
+    print("Ingrese su contraseña(minimo 8 caracteres):")
+    contraseña = input()
+    while True:
+        if len(contraseña) < 8:
+            print("La contraseña debe tener al menos 8 caracteres. Por favor, ingrese una contraseña válida:")
+            contraseña = input()
+        else:
+            break
+    print("Ingrese su DNI:")
+    dni = input()
+    while True:
+            if not dni.isdigit() or len(dni) != 8:
+                print("El DNI debe contener exactamente 8 numeros. Por favor, ingrese un DNI válido:")
+                dni = input()
+            else:
+                break
+    print("Usuario registrado con éxito.")
+
+
+
+
+    
+    
+    nuevo_df = pd.DataFrame([{
+        'NombreDeUsuario': nombre_usuario,
+        'Correo': correo,
+        'Contraseña': contraseña,
+        'DNI': dni
+    }])
+
+    try:
+        df = pd.read_csv(ruta)
+
+        df = pd.concat([df, nuevo_df], ignore_index=True)
+        print("GUARDANDO EN:")
+        print(ruta)
+        nuevo_df.to_csv(ruta, mode='a', header=False, index=False)
+        print("ARCHIVO GUARDADO")
+        df.to_csv(ruta, index=False)
+        print("Usuario agregado correctamente.")
+
+    except FileNotFoundError:
+
+        nuevo_df.to_csv(ruta, index=False)
+        print("Archivo creado y usuario agregado correctamente.")
+
+    t.sleep(2)
+    main()
+    
+
+def iniciar_sesion():
+    ruta = "C:\\Users\\aquil\\Desktop\\mierda\\Escuela-Abierta---Resoluciones-Logicas---Sistema-de-gestion-de-alimentos-en-python\\python\\usuarios.csv"
+
+    df_usuarios = pd.read_csv(ruta, dtype={'DNI': str})
+
+
+    usuario_ingresado = input("Ingresa tu usuario: ")
+    correo_ingresado = input("Ingresa tu correo electrónico: ")
+    password_ingresada = input("Ingresa tu contraseña: ")
+    dni_ingresado = input("Ingresa tu DNI: ")
+
+    # 3. Buscar si coinciden TODOS los campos en una sola fila
+    coincidencia = df_usuarios[
+        (df_usuarios['NombreDeUsuario'].astype(str) == usuario_ingresado) &
+        (df_usuarios['Correo'].astype(str) == correo_ingresado) &
+        (df_usuarios['Contraseña'].astype(str) == password_ingresada) &
+        (df_usuarios['DNI'].astype(str) == dni_ingresado)
+    ]
+
+    # 4. Validar el resultado
+    if not coincidencia.empty:
+        print("¡Inicio de sesión exitoso! Todos los datos son correctos.")
+    else:
+        print("Error: El usuario no existe o los datos ingresados no coinciden.")
+
+
 
 def main():
+    ruta = "C:\\Users\\aquil\\Desktop\\mierda\\Escuela-Abierta---Resoluciones-Logicas---Sistema-de-gestion-de-alimentos-en-python\\python\\usuarios.csv"
+    lecturaCSV = pd.read_csv(ruta)
+    print(lecturaCSV)
+    
+    print("---Bienvenido al sistema de gestión de alimentos---")
+    print("Seleccione una opción:")
+    print("1. Registrarse")
+    print("2. Iniciar sesión")
+    print("0. Salir")
+    opcion = input("Ingrese su opción: ")
+    if opcion == "1":
+        registrarse()
+    elif opcion == "2":
+        iniciar_sesion()
+    elif opcion == "0":
+        print("Saliendo del sistema...")
+    else:
+        print("Opción inválida. Por favor, seleccione una opción válida.")
 
-        print("---------------SISTEMA DE GESTIÓN DE INVENTARIO---------------")
-        print("1. Ver Alimentos disponibles")
-        print("2. Agregar un alimento")
-        print("3. Eliminar un alimento")
-        print("0. Salir")
-
-        BotonSeleccionado = input("Seleccione una opción: ")
-        
-        if BotonSeleccionado == "1":
-            print("Productos disponibles:")
-            ver_productos()
-        elif BotonSeleccionado == "2":
-            print("Agregar un alimento:")
-            agregar_producto(input("Ingrese el nombre del producto: "), 
-                             input("Ingrese la cantidad: "), 
-                             input("Ingrese la fecha de vencimiento (YYYY-MM-DD): "))
-            
-        elif BotonSeleccionado == "3":
-            print("Eliminar un producto:")
-            eliminar_producto(input("Ingrese el nombre del producto a eliminar: "))
-        elif BotonSeleccionado == "0":
-            print("Saliendo del sistema...")
-            sys.exit()
-        else:
-            print("Opción no válida. Vuelve a intentarlo.")
-            time.sleep(2)
-            main()
-            
-        
-        
 if __name__ == "__main__":
     main()
