@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff2cf">
+    <meta name="description" content="EcoRaciones busca facilitar la gestión de alimentos y acercar a quienes pueden donar con los centros que los necesitan.">
+    <title>EcoRaciones — Alimentos que llegan más lejos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#inicio" aria-label="EcoRaciones, ir al inicio">
+                <img src="assets/logo_color_horizontal.png" alt="EcoRaciones">
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+                <span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+                <a href="#propuesta">La propuesta</a>
+                <a href="#funciones">Qué estamos creando</a>
+                <a href="#capturas">Vistas de la app</a>
+                <a class="nav-cta" href="#proyecto">Conocer el proyecto <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="hero section-wrap" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> Una iniciativa en desarrollo</p>
+                <h1 id="hero-title">Que ningún alimento se quede <span>sin compartir.</span></h1>
+                <p class="hero-description">Estamos creando una herramienta para que la gestión de alimentos en centros comunitarios sea más clara, organizada y cercana.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#propuesta">Conocé la propuesta <span aria-hidden="true">↓</span></a>
+                    <span class="availability"><span aria-hidden="true">✳</span> La aplicación aún está en desarrollo</span>
+                </div>
+                <div class="hero-note">
+                    <span class="note-mark" aria-hidden="true">+</span>
+                    <p>Una idea que nace para acompañar a quienes alimentan a su comunidad cada día.</p>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-carousel" aria-label="Imágenes de muestra de EcoRaciones">
+                    <div class="carousel-track">
+                        <div class="carousel-slide is-active" data-caption="Más organización." data-highlight="Más alimentos aprovechados." role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
+                            <img src="assets/portada.jpeg" alt="Frutas y verduras frescas dispuestas sobre una mesa">
+                            <span class="slide-badge"><span aria-hidden="true">✳</span> Imagen ilustrativa</span>
+                        </div>
+                        <div class="carousel-slide" data-caption="Cada aporte cuenta." data-highlight="Cada alimento también." role="group" aria-roledescription="diapositiva" aria-label="2 de 3" aria-hidden="true">
+                            <img src="assets/caja-de-alimentos.jpg" alt="Caja con alimentos donados" loading="lazy">
+                            <span class="slide-badge"><span aria-hidden="true">✳</span> Imagen ilustrativa</span>
+                        </div>
+                        <div class="carousel-slide carousel-brand-slide" data-caption="Una idea que crece." data-highlight="Muy pronto, más." role="group" aria-roledescription="diapositiva" aria-label="3 de 3" aria-hidden="true">
+                            <img src="assets/logo_color_vertical.png" alt="" aria-hidden="true">
+                            <span class="brand-slide-copy">Estamos preparando<br><strong>nuevas imágenes.</strong></span>
+                            <span class="slide-badge"><span aria-hidden="true">✳</span> Espacio para una foto</span>
+                        </div>
+                    </div>
+                    <div class="carousel-controls" aria-label="Controles del carrusel">
+                        <button class="carousel-arrow carousel-previous" type="button" aria-label="Imagen anterior">←</button>
+                        <div class="carousel-dots" aria-label="Elegir imagen">
+                            <button type="button" aria-label="Mostrar imagen 1" aria-current="true"></button>
+                            <button type="button" aria-label="Mostrar imagen 2" aria-current="false"></button>
+                            <button type="button" aria-label="Mostrar imagen 3" aria-current="false"></button>
+                        </div>
+                        <button class="carousel-arrow carousel-next" type="button" aria-label="Imagen siguiente">→</button>
+                        <button class="carousel-pause" type="button" aria-label="Pausar rotación" aria-pressed="false">Ⅱ</button>
+                    </div>
+                </div>
+                <div class="image-caption">
+                    <span class="caption-icon" aria-hidden="true">✳</span>
+                    <span class="carousel-caption"><span class="caption-primary">Más organización.</span><br><strong class="caption-highlight">Más alimentos aprovechados.</strong></span>
+                </div>
+                <div class="floating-label"><span aria-hidden="true">↗</span> Alimentar también es conectar</div>
+            </div>
+            <a class="scroll-cue" href="#propuesta" aria-label="Desplazarse a la propuesta"><span></span> Deslizá para conocer más</a>
+        </section>
+
+        <section class="intro-section" id="propuesta" aria-labelledby="intro-title">
+            <div class="section-wrap intro-grid">
+                <div class="section-heading">
+                    <p class="eyebrow eyebrow-light">El punto de partida</p>
+                    <h2 id="intro-title">Detrás de cada alimento, hay una oportunidad.</h2>
+                </div>
+                <div class="intro-copy">
+                    <p>Comedores y espacios comunitarios necesitan organizar lo que reciben y lo que tienen disponible. EcoRaciones quiere ayudar a que esa tarea cotidiana sea más sencilla.</p>
+                    <p>Imaginamos un espacio digital que facilite el registro de alimentos y acerque a donantes y centros comunitarios, con la colaboración como punto de encuentro.</p>
+                    <a class="text-link" href="#funciones">Así imaginamos la herramienta <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <img class="intro-logo" src="assets/logo_blanco_horizontal.png" alt="EcoRaciones">
+            <div class="intro-stamp" aria-hidden="true">Compartir<br>hace bien <span>✳</span></div>
+        </section>
+
+        <section class="features-section section-wrap" id="funciones" aria-labelledby="features-title">
+            <div class="features-top">
+                <div>
+                    <p class="eyebrow">Una herramienta con propósito</p>
+                    <h2 id="features-title">Pensada para el día a día<br>de quienes <span>dan y reciben.</span></h2>
+                </div>
+                <p class="section-aside">Estas son algunas de las ideas que guían el desarrollo. La aplicación todavía no está disponible para su uso.</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card feature-card-green">
+                    <span class="feature-number">01 / ORGANIZAR</span>
+                    <div class="feature-icon inventory-icon" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <h3>Alimentos a la vista</h3>
+                    <p>Una forma simple de consultar y mantener organizado el registro de alimentos de cada centro.</p>
+                    <span class="feature-arrow" aria-hidden="true">↗</span>
+                </article>
+                <article class="feature-card feature-card-blue">
+                    <span class="feature-number">02 / COLABORAR</span>
+                    <div class="feature-icon people-icon" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <h3>Personas con un mismo propósito</h3>
+                    <p>Un espacio pensado para acompañar a donantes y encargados de alimentos en su trabajo.</p>
+                    <span class="feature-arrow" aria-hidden="true">↗</span>
+                </article>
+                <article class="feature-card feature-card-yellow">
+                    <span class="feature-number">03 / APROVECHAR</span>
+                    <div class="feature-icon heart-icon" aria-hidden="true">✳</div>
+                    <h3>Menos desperdicio, más comunidad</h3>
+                    <p>La meta: que la organización ayude a aprovechar mejor los alimentos disponibles.</p>
+                    <span class="feature-arrow" aria-hidden="true">↗</span>
+                </article>
+            </div>
+            <p class="features-disclaimer"><span aria-hidden="true">✳</span> La experiencia y las funciones pueden cambiar mientras desarrollamos el proyecto.</p>
+        </section>
+
+        <section class="screenshots-section" id="capturas" aria-labelledby="screenshots-title">
+            <div class="section-wrap">
+                <div class="screenshots-heading">
+                    <div>
+                        <p class="eyebrow">Vistas de la aplicación</p>
+                        <h2 id="screenshots-title">Muy pronto, <span>en pantalla.</span></h2>
+                    </div>
+                    <p>Estamos reservando el espacio para mostrar la aplicación real cuando esté terminada. Estas vistas todavía no son capturas ni pantallas funcionales.</p>
+                </div>
+                <div class="screenshots-grid">
+                    <article class="screenshot-card">
+                        <div class="screenshot-placeholder placeholder-purple" role="img" aria-label="Espacio reservado para una captura real del panel principal de EcoRaciones">
+                            <span class="placeholder-window"><span></span><span></span><span></span></span>
+                            <img src="assets/logo_color.png" alt="" aria-hidden="true">
+                            <span class="placeholder-label">Captura pendiente</span>
+                            <span class="placeholder-note">Reemplazar por una imagen real</span>
+                        </div>
+                        <div class="screenshot-caption"><span>01</span><h3>Panel principal</h3></div>
+                    </article>
+                    <article class="screenshot-card">
+                        <div class="screenshot-placeholder placeholder-blue" role="img" aria-label="Espacio reservado para una captura real de la gestión de alimentos">
+                            <span class="placeholder-window"><span></span><span></span><span></span></span>
+                            <img src="assets/logo_color.png" alt="" aria-hidden="true">
+                            <span class="placeholder-label">Captura pendiente</span>
+                            <span class="placeholder-note">Reemplazar por una imagen real</span>
+                        </div>
+                        <div class="screenshot-caption"><span>02</span><h3>Gestión de alimentos</h3></div>
+                    </article>
+                    <article class="screenshot-card">
+                        <div class="screenshot-placeholder placeholder-green" role="img" aria-label="Espacio reservado para una captura real de los perfiles de usuario">
+                            <span class="placeholder-window"><span></span><span></span><span></span></span>
+                            <img src="assets/logo_color.png" alt="" aria-hidden="true">
+                            <span class="placeholder-label">Captura pendiente</span>
+                            <span class="placeholder-note">Reemplazar por una imagen real</span>
+                        </div>
+                        <div class="screenshot-caption"><span>03</span><h3>Perfiles de usuario</h3></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section" id="proyecto" aria-labelledby="project-title">
+            <div class="section-wrap project-inner">
+                <div class="project-image-wrap">
+                    <img src="assets/caja-de-alimentos.jpg" alt="Una caja con alimentos donados y listos para compartir" loading="lazy">
+                    <span class="photo-tag">Pequeñas acciones, grandes encuentros</span>
+                </div>
+                <div class="project-copy">
+                    <p class="eyebrow eyebrow-light">Estamos dando los primeros pasos</p>
+                    <h2 id="project-title">Una idea que se construye <span>en comunidad.</span></h2>
+                    <p>EcoRaciones todavía está en desarrollo. Por ahora, estamos trabajando en una herramienta que ayude a gestionar alimentos y haga más visible el valor de colaborar.</p>
+                    <a class="button button-light" href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a>
+                    <p class="project-footnote">Este sitio presenta la propuesta; no es una plataforma de registro ni de gestión.</p>
+                </div>
+                <span class="project-decoration" aria-hidden="true">E<br>R</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-wrap footer-inner">
+            <a class="brand footer-brand" href="#inicio" aria-label="EcoRaciones, ir al inicio">
+                <img src="assets/logo_color_horizontal.png" alt="EcoRaciones">
+            </a>
+            <p>Alimentos que llegan más lejos.</p>
+            <span>© <span id="current-year">2026</span> EcoRaciones <span class="footer-separator">·</span> Un proyecto en desarrollo</span>
+        </div>
+    </footer>
+</body>
+</html>
