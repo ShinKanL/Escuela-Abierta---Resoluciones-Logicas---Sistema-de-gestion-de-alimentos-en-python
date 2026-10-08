@@ -4,6 +4,7 @@ from logregister import registrarse
 from logregister import iniciar_sesion
 
 
+
 def main():
     ruta = "C:\\Users\\aquil\\Desktop\\mierda\\Escuela-Abierta---Resoluciones-Logicas---Sistema-de-gestion-de-alimentos-en-python\\python\\usuarios.csv"
     lecturaCSV = pd.read_csv(ruta)
